@@ -229,17 +229,30 @@
     if (!list) return;
     list.innerHTML = data.map(function (p, i) {
       var badges = (p.badges || []).map(function (b) {
-        return '<span class="badge badge--pubmed">' + escapeHTML(b) + '</span>';
+        return '<span class="badge">' + escapeHTML(b) + '</span>';
       }).join('');
+      if (p.pmid) {
+        badges = '<a class="badge badge--pubmed" href="https://pubmed.ncbi.nlm.nih.gov/' + escapeHTML(p.pmid) +
+                 '/" target="_blank" rel="noopener noreferrer">PMID ' + escapeHTML(p.pmid) + '</a>' + badges;
+      }
       if (p.cites) badges = '<span class="badge badge--cite">' + p.cites + ' citations</span>' + badges;
       if (p.award) badges = '<span class="badge badge--award">' + escapeHTML(p.award) + '</span>' + badges;
+
+      /* prefer the PubMed record; fall back to the DOI for entries not yet indexed */
+      var href = p.pmid ? 'https://pubmed.ncbi.nlm.nih.gov/' + p.pmid + '/'
+               : p.doi  ? 'https://doi.org/' + p.doi
+               : null;
+      var title = href
+        ? '<a class="pub__title pub__title--link" href="' + escapeHTML(href) + '" target="_blank" rel="noopener noreferrer">' +
+            escapeHTML(p.title) + '<span class="pub__ext" aria-hidden="true">↗</span></a>'
+        : '<p class="pub__title">' + escapeHTML(p.title) + '</p>';
 
       return '' +
         '<li class="pub" data-tags="' + (p.tags || []).join(' ') + '" ' +
             'data-text="' + escapeHTML((p.title + ' ' + p.authors + ' ' + p.venue + ' ' + (p.detail || '')).toLowerCase()) + '">' +
           '<span class="pub__n">' + String(i + 1).padStart(2, '0') + '</span>' +
           '<div>' +
-            '<p class="pub__title">' + escapeHTML(p.title) + '</p>' +
+            title +
             '<p class="pub__authors">' + highlightAuthor(p.authors) + '</p>' +
             '<p class="pub__venue"><em>' + escapeHTML(p.venue) + '</em> · ' + escapeHTML(p.detail || '') + '</p>' +
           '</div>' +
