@@ -109,7 +109,7 @@
       <a href="#roles">Roles</a>
       <a href="#research">Research</a>
       <a href="#publications">Publications</a>
-      <a href="#zenquip">ZenQuip</a>
+      <a href="#systems">Systems</a>
     </nav>
     <a class="btn btn--dark nav__cta" href="#contact">Get in touch</a>
     <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
@@ -123,7 +123,7 @@
     <a href="#roles">Roles</a>
     <a href="#research">Research</a>
     <a href="#publications">Publications</a>
-    <a href="#zenquip">ZenQuip</a>
+    <a href="#systems">Systems</a>
     <a href="#teaching">Teaching</a>
     <a href="#contact">Contact</a>
   </div>
@@ -241,10 +241,10 @@
 
       <p class="lead words" data-reveal>
         Psychiatrist and academic with nine-plus years spanning inpatient and outpatient care,
-        undergraduate and postgraduate teaching, and high-impact research. Co-architect of
-        ZenQuip — a digital platform positioned as clinical continuity infrastructure for mental
-        healthcare, connecting clinicians and patients through structured CBT tools, courses and
-        AI-assisted support.
+        undergraduate and postgraduate teaching, and high-impact research. Alongside the clinic I
+        build clinically grounded AI systems for psychiatry: an ICD-11 conversational assessment
+        engine, Nurturiq for neurodevelopmental assessment through to home therapy, and ZenQuip for
+        structured adult mental-health programmes with live patient–clinician sync.
       </p>
 
       <p class="muted" data-reveal>
@@ -495,41 +495,167 @@
   </div>
 </section>
 
-<!-- ══════════════════ ZENQUIP ══════════════════ -->
-<section class="section section--ocean" id="zenquip">
+<!-- ══════════════════ SYSTEMS ══════════════════ -->
+<section class="section section--ocean" id="systems">
   <div class="ocean-mesh" aria-hidden="true"><span></span><span></span></div>
-  <div class="wrap zq">
-    <div class="zq__head">
-      <p class="kicker kicker--light" data-reveal>Venture</p>
-      <h2 class="h2 h2--wide split-lines" data-reveal>ZenQuip — clinical continuity, in the gaps between sessions.</h2>
+  <div class="wrap sys">
+    <div class="sys__intro">
+      <p class="kicker kicker--light" data-reveal>Systems</p>
+      <h2 class="h2 h2--wide split-lines" data-reveal>Clinically grounded AI for psychiatry, across the lifespan.</h2>
       <p class="lead lead--light" data-reveal>
-        A digital mental health platform built as infrastructure rather than an app: expert-designed
-        CBT worksheets, structured courses and AI-assisted support that keep therapy alive between
-        appointments — for individuals, clinicians and organisations.
+        Three systems, one through-line: specification and clinical ownership first, language models
+        as the interface — never the sole source of diagnostic or therapeutic truth.
       </p>
-      <div class="zq__actions" data-reveal>
-        <a class="btn btn--light btn--lg magnet" href="https://zenquip.com" target="_blank" rel="noopener noreferrer">Visit zenquip.com ↗</a>
-      </div>
     </div>
 
-    <div class="zq__grid">
-      <article class="glass" data-reveal style="--d:0s">
-        <h3>For professionals</h3>
-        <p>Ready-to-use CBT tools that streamline sessions and deepen client engagement — worksheets, pathways and session templates.</p>
-      </article>
-      <article class="glass" data-reveal style="--d:.08s">
-        <h3>For individuals</h3>
-        <p>Mindful habits and goal tracking: practical exercises on thought triggers, anxiety reduction and emotional resilience.</p>
-      </article>
-      <article class="glass" data-reveal style="--d:.16s">
-        <h3>For organisations</h3>
-        <p>Workplace mental health outreach through digital workbooks and stigma-reduction partnerships.</p>
-      </article>
-      <article class="glass" data-reveal style="--d:.24s">
-        <h3>Intellectual property</h3>
-        <p>Copyright-registered <em>Exercise for Depression</em> programme and <em>Zennie</em>, the platform's therapeutic engagement character. Principal creator of both.</p>
-      </article>
-    </div>
+    <!-- ICD-11 -->
+    <article class="sys__project" id="icd11" data-reveal>
+      <div class="sys__label">
+        <span class="sys__num">01</span>
+        <span class="status status--build">Specification complete · corpus in progress</span>
+      </div>
+      <h3>ICD-11 conversational psychiatric assessment</h3>
+      <p class="sys__role">Lead designer · clinical–AI systems</p>
+      <p class="sys__lede">
+        Unconstrained language models sound clinically fluent but miss what psychiatry actually
+        requires: structured inquiry, diagnostic hierarchy — organic and substance causes considered
+        before primary psychiatric ones — explicit differentials, and auditable linkage to formal
+        nomenclature.
+      </p>
+      <p class="sys__body">
+        This system grounds the entire assessment in the WHO ICD-11 Clinical Descriptions and
+        Diagnostic Requirements. Clinical correctness lives in a versioned, reviewable specification
+        that colleagues audit module by module; the model learns how to conduct a safe, hierarchical,
+        differential-oriented interview rather than inventing diagnostic truth. Questions are
+        plain-language and self-administered.
+      </p>
+
+      <div class="sys__figures">
+        <div><b>~1,200</b><span>Specified questions</span></div>
+        <div><b>10</b><span>Clinical domains</span></div>
+        <div><b>2–4</b><span>Provisional codes returned</span></div>
+      </div>
+
+      <details class="domains" data-reveal>
+        <summary>Coverage by clinical domain</summary>
+        <ul>
+          <li><span>Neurodevelopmental disorders</span><b>~275</b></li>
+          <li><span>Mood, anxiety, OCD, stress, dissociation</span><b>~262</b></li>
+          <li><span>Organic mental disorders &amp; substance use</span><b>~256</b></li>
+          <li><span>Maltreatment, relationships, health-status factors</span><b>~87</b></li>
+          <li><span>Impulse control &amp; disruptive behaviour</span><b>~64</b></li>
+          <li><span>Primary psychotic spectrum</span><b>~59</b></li>
+          <li><span>Paraphilic disorders</span><b>~54</b></li>
+          <li><span>Feeding, eating &amp; elimination</span><b>~53</b></li>
+          <li><span>Personality disorder &amp; trait domains</span><b>~46</b></li>
+          <li><span>Perinatal &amp; obstetric psychological factors</span><b>~44</b></li>
+        </ul>
+        <p class="domains__note">Plus cross-domain rules for comorbidity, diagnostic hierarchy and boundary cases.</p>
+      </details>
+
+      <p class="sys__safety">
+        <strong>By design:</strong> outputs are always provisional differentials, never a definitive
+        diagnosis. Built for self-administered screening and clinician decision-support research —
+        not to replace clinical judgment.
+      </p>
+    </article>
+
+    <!-- NURTURIQ -->
+    <article class="sys__project" id="nurturiq" data-reveal>
+      <div class="sys__label">
+        <span class="sys__num">02</span>
+        <span class="status status--build">Product &amp; wireframes · screening track in R&amp;D</span>
+      </div>
+      <h3>Nurturiq / Observa</h3>
+      <p class="sys__role">Clinical product &amp; AI systems design · neurodevelopmental care</p>
+      <p class="sys__quote">“OpenEvidence ends at the answer. Nurturiq begins at the answer.”</p>
+      <p class="sys__lede">
+        Families wait years between a first concern and a formal diagnosis. Clinics still lean on
+        subjective questionnaires designed in the 1980s, and parents leave a screening visit without
+        a usable home programme — so between-visit care collapses into PDFs and guesswork.
+      </p>
+      <p class="sys__body">
+        Nurturiq closes that loop: <em>assess → plan → deliver → track → adapt.</em> A structured
+        developmental assessment across motor, communication, social, sensory and behavioural domains
+        produces a developmental-quotient and skills-gap profile; the clinician approves a three-pillar
+        week plan across occupational therapy, sensory integration and applied behaviour analysis;
+        step-locked exercise arcs are delivered at home; adherence and mastery flow back, and plateau
+        or regression raises a clinician alert.
+      </p>
+
+      <div class="sys__tracks">
+        <div class="track" data-reveal>
+          <span class="track__aud">Clinicians</span>
+          <b>Observa Clinic</b>
+          <p>Structured intake, Patient 360, AI-supported three-pillar plans, prescribe and approve arcs, mastery and plateau alerts.</p>
+        </div>
+        <div class="track" data-reveal style="--d:.08s">
+          <span class="track__aud">Parents</span>
+          <b>Observa Care</b>
+          <p>Guided developmental assessment, skills-gap profile, prescribed home therapy on tablet, adherence check-ins on mobile.</p>
+        </div>
+        <div class="track" data-reveal style="--d:.16s">
+          <span class="track__aud">Research</span>
+          <b>Observa Screen</b>
+          <p>Webcam-based gaze and behaviour biomarkers for autism-detection research. Protocol-first, not a consumer toy.</p>
+        </div>
+      </div>
+
+      <div class="sys__figures">
+        <div><b>38,000+</b><span>Indexed therapy-content chunks</span></div>
+        <div><b>3</b><span>Pillars: OT · SI · ABA</span></div>
+        <div><b>5</b><span>Assessment domains</span></div>
+      </div>
+
+      <p class="sys__safety">
+        <strong>Clinical ownership:</strong> a clinician approves and audits before any arc unlocks.
+        The knowledge base is proprietary and CBT/MET/DBT-informed, with neurodevelopment-specific coaching.
+      </p>
+    </article>
+
+    <!-- ZENQUIP -->
+    <article class="sys__project" id="zenquip" data-reveal>
+      <div class="sys__label">
+        <span class="sys__num">03</span>
+        <span class="status status--live">Live · patient and clinician apps shipping</span>
+      </div>
+      <h3>ZenQuip &amp; ZenDoc</h3>
+      <p class="sys__role">Co-founder &amp; clinical lead · adult mental health</p>
+      <p class="sys__lede">
+        Most mental health apps are wellness content without clinical structure, and traditional care
+        is scarce. The missing middle layer is structured therapeutic programmes joined to provider
+        workflow, with safety built in rather than bolted on.
+      </p>
+      <p class="sys__body">
+        ZenQuip is the patient app — mood tracker, thought journal, CBT modules, substance-use therapy
+        modules and habit tracking. ZenDoc is the clinician dashboard, where medication and
+        therapy-target prescriptions sit together, flow into the patient's agenda, and return progress,
+        mood trends and engagement to the clinician. Prescriptions sync bidirectionally between the two.
+      </p>
+
+      <div class="sys__figures">
+        <div><b>35</b><span>Therapeutic arcs</span></div>
+        <div><b>487</b><span>Guided exercises</span></div>
+        <div><b>6</b><span>Domains covered</span></div>
+      </div>
+
+      <p class="sys__body">
+        Arcs span anxiety, mood, trauma, identity, behaviour and cognition. The next phase is
+        <em>Zennie</em> — a conversational layer separating open chat from strict step-through exercise
+        programmes, with guardrails, crisis detection, escalation and audit logging designed in from
+        the start. It is in prototyping.
+      </p>
+
+      <p class="sys__safety">
+        <strong>Registered IP:</strong> <em>Exercise for Depression</em>, a structured therapeutic
+        workbook programme, and <em>Zennie</em>, the platform's therapeutic engagement character —
+        both copyright-registered, principal creator of both.
+      </p>
+
+      <div class="sys__actions">
+        <a class="btn btn--light btn--lg magnet" href="https://zenquip.com" target="_blank" rel="noopener noreferrer">Visit zenquip.com ↗</a>
+      </div>
+    </article>
   </div>
 </section>
 
@@ -565,9 +691,9 @@
       </article>
 
       <article class="stack__card" data-reveal>
-        <div class="stack__meta"><span class="pill pill--accent">Co-Founder</span><span class="pill">Regulatory pathway</span></div>
-        <h3>ZenQuip — end-to-end mental health platform</h3>
-        <p>Psychiatrist–patient platform with a fully developed AI-powered, CBT-embedded adult chatbot, progressing along a regulatory clearance pathway.</p>
+        <div class="stack__meta"><span class="pill pill--accent">Lead designer</span><span class="pill">WHO ICD-11 CDDR</span></div>
+        <h3>ICD-11 conversational psychiatric assessment</h3>
+        <p>Roughly 1,200 specified questions across ten clinical domains, grounded in the WHO Clinical Descriptions and Diagnostic Requirements, returning provisional differentials for decision-support research. <a class="inline-link" href="#icd11">See the system ↓</a></p>
       </article>
     </div>
   </div>
