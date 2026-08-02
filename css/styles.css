@@ -335,6 +335,88 @@ button{font:inherit;color:inherit;border:0;background:none;cursor:pointer;}
 }
 .spotlight:hover::before{opacity:1;}
 
+/* ── AI & ML credentials ──────────────────────────────────── */
+.aiml__head{display:grid;grid-template-columns:1.25fr .75fr;gap:clamp(24px,4vw,56px);align-items:end;}
+.aiml__note{font-size:.98rem;max-width:38ch;}
+
+.creds{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:52px;}
+.cred{
+  position:relative;background:var(--paper);border:1px solid var(--line);
+  border-radius:var(--r-lg);padding:30px 30px 26px;overflow:hidden;isolation:isolate;
+  display:flex;flex-direction:column;
+  transition:transform .5s var(--ease-out),box-shadow .5s var(--ease),border-color .4s var(--ease);
+}
+.cred:hover{transform:translateY(-5px);box-shadow:var(--shadow-m);border-color:var(--lilac);}
+/* the Stanford specialisation is the headline credential — it gets the full row */
+.cred--lead{grid-column:1 / -1;background:linear-gradient(180deg,#fbfcff,#f2f5fe);}
+.cred__issuers{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;}
+.issuer{
+  font-family:var(--font-mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;
+  padding:6px 12px;border-radius:7px;background:var(--mist-2);color:var(--ink-2);font-weight:500;
+}
+.issuer--stanford{background:#8c1515;color:#fff;}
+.cred h3{font-size:clamp(1.3rem,2.2vw,1.75rem);margin-bottom:12px;letter-spacing:-.03em;}
+.cred--lead h3{font-size:clamp(1.6rem,3vw,2.4rem);}
+.cred__desc{font-size:.96rem;color:var(--muted);line-height:1.58;max-width:62ch;margin-bottom:18px;}
+.cred__courses{
+  display:flex;flex-direction:column;gap:8px;margin-bottom:22px;
+  counter-reset:c;max-width:62ch;
+}
+.cred__courses li{
+  counter-increment:c;position:relative;padding-left:30px;
+  font-size:.93rem;color:var(--ink-2);font-weight:550;
+}
+.cred__courses li::before{
+  content:counter(c);position:absolute;left:0;top:1px;
+  width:20px;height:20px;border-radius:6px;background:var(--ocean-800);color:#fff;
+  font-family:var(--font-mono);font-size:.62rem;display:grid;place-items:center;
+}
+.cred__foot{
+  margin-top:auto;padding-top:16px;border-top:1px dashed var(--line);
+  display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;
+}
+.cred__meta{font-family:var(--font-mono);font-size:.7rem;letter-spacing:.04em;color:var(--muted);}
+.verify{
+  display:inline-flex;align-items:center;gap:4px;font-size:.85rem;font-weight:700;color:var(--blue);
+  padding:6px 12px;border-radius:999px;background:var(--mist);
+  transition:background .3s var(--ease),color .3s var(--ease),transform .3s var(--ease-out);
+}
+.verify:hover{background:var(--blue);color:#fff;transform:translateY(-1px);}
+
+/* applied work */
+.applied{margin-top:clamp(48px,6vw,76px);}
+.applied__title{font-size:1.05rem;letter-spacing:.02em;margin-bottom:22px;color:var(--ink-2);}
+.applied__list{display:flex;flex-direction:column;}
+.applied__list li{
+  display:grid;grid-template-columns:minmax(150px,.28fr) 1fr;gap:20px;
+  padding:22px 0;border-top:1px solid var(--line);
+  transition:background .3s var(--ease);
+}
+.applied__list li:last-child{border-bottom:1px solid var(--line);}
+.applied__tag{
+  font-family:var(--font-mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--blue);padding-top:4px;
+}
+.applied__list h4{font-size:1.1rem;margin-bottom:7px;letter-spacing:-.025em;}
+.applied__list p{font-size:.94rem;color:var(--muted);line-height:1.55;max-width:70ch;}
+
+/* methods belt */
+.toolbelt{
+  margin-top:clamp(40px,5vw,60px);display:flex;flex-wrap:wrap;align-items:center;gap:10px;
+  padding:22px 26px;border-radius:var(--r);background:var(--mist);
+}
+.toolbelt__label{
+  font-family:var(--font-mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--muted);margin-right:6px;
+}
+.toolbelt ul{display:flex;flex-wrap:wrap;gap:8px;}
+.toolbelt li{
+  font-size:.85rem;font-weight:600;color:var(--ink-2);
+  padding:6px 13px;border-radius:999px;background:rgba(255,255,255,.8);
+}
+
+.chip--key{background:var(--ocean-800);color:#fff;}
+
 /* ── Roles / timeline ─────────────────────────────────────── */
 .roles__grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(36px,6vw,80px);align-items:start;}
 .roles__side{position:sticky;top:120px;}
@@ -571,7 +653,8 @@ button{font:inherit;color:inherit;border:0;background:none;cursor:pointer;}
   .nav__drawer a:last-child{border-bottom:0;}
 
   .stats__grid{grid-template-columns:repeat(2,1fr);row-gap:34px;}
-  .about__grid,.roles__grid,.books__grid,.teach__grid{grid-template-columns:1fr;}
+  .about__grid,.roles__grid,.books__grid,.teach__grid,.aiml__head{grid-template-columns:1fr;}
+  .aiml__head{align-items:start;gap:18px;}
   .about__media,.roles__side,.teach__col{position:static;}
   .portrait{max-width:340px;}
   .stack__card{position:static;}
@@ -581,7 +664,9 @@ button{font:inherit;color:inherit;border:0;background:none;cursor:pointer;}
   body{font-size:16px;}
   .hero{min-height:auto;padding:130px 0 76px;}
   .hero__scroll{display:none;}
-  .cards,.zq__grid,.honour__grid,.teach__lists{grid-template-columns:1fr;}
+  .cards,.zq__grid,.honour__grid,.teach__lists,.creds{grid-template-columns:1fr;}
+  .applied__list li{grid-template-columns:1fr;gap:8px;}
+  .applied__tag{padding-top:0;}
   .honour--hero{grid-column:span 1;}
   .facts li{grid-template-columns:1fr;gap:5px;}
   .tl__head{grid-template-columns:1fr;}
