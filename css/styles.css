@@ -279,6 +279,35 @@ button{font:inherit;color:inherit;border:0;background:none;cursor:pointer;}
 .section--ocean{background:var(--ocean-900);color:#fff;overflow:hidden;}
 .section--ocean .h2{color:#fff;}
 
+/* ── Pillars: the four things ─────────────────────────────── */
+.pillars{padding-top:clamp(48px,6vw,80px);}
+.pillars__head{display:grid;grid-template-columns:1.25fr .75fr;gap:clamp(24px,4vw,56px);align-items:end;}
+.pillars__note{font-size:.98rem;max-width:36ch;}
+.pillars__grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:52px;}
+.pillar{
+  position:relative;display:flex;flex-direction:column;
+  background:var(--paper);border:1px solid var(--line);border-radius:var(--r-lg);
+  padding:30px 30px 26px;overflow:hidden;isolation:isolate;
+  transition:transform .5s var(--ease-out),box-shadow .5s var(--ease),border-color .4s var(--ease);
+}
+.pillar:hover{transform:translateY(-5px);box-shadow:var(--shadow-m);border-color:var(--lilac);}
+.pillar__n{
+  font-family:var(--font-mono);font-size:.72rem;letter-spacing:.16em;color:var(--blue);
+  margin-bottom:16px;
+}
+.pillar__kind{
+  display:inline-flex;align-self:flex-start;align-items:center;
+  font-family:var(--font-mono);font-size:.63rem;letter-spacing:.09em;text-transform:uppercase;
+  padding:5px 11px;border-radius:6px;background:var(--mist-2);color:var(--ink-2);margin-bottom:16px;
+}
+.pillar h3{font-size:clamp(1.3rem,2.2vw,1.7rem);letter-spacing:-.03em;margin-bottom:12px;}
+.pillar p{font-size:.95rem;color:var(--muted);line-height:1.6;margin-bottom:22px;}
+.pillar__go{
+  margin-top:auto;font-size:.88rem;font-weight:700;color:var(--blue);
+  transition:transform .3s var(--ease-out);display:inline-block;
+}
+.pillar:hover .pillar__go{transform:translateX(4px);}
+
 /* ── About ────────────────────────────────────────────────── */
 .about__grid{display:grid;grid-template-columns:minmax(280px,.85fr) 1.15fr;gap:clamp(36px,6vw,84px);align-items:start;}
 .about__media{position:sticky;top:110px;}
@@ -793,7 +822,8 @@ a.badge--pubmed:hover{background:#20558a;color:#fff;}
   .nav__drawer a:last-child{border-bottom:0;}
 
   .stats__grid{grid-template-columns:repeat(2,1fr);row-gap:34px;}
-  .about__grid,.roles__grid,.books__grid,.teach__grid,.aiml__head{grid-template-columns:1fr;}
+  .about__grid,.roles__grid,.books__grid,.teach__grid,.aiml__head,.pillars__head{grid-template-columns:1fr;}
+  .pillars__head{align-items:start;gap:18px;}
   .aiml__head{align-items:start;gap:18px;}
   .about__media,.roles__side,.teach__col{position:static;}
   .portrait{max-width:340px;}
@@ -805,7 +835,7 @@ a.badge--pubmed:hover{background:#20558a;color:#fff;}
   body{font-size:16px;}
   .hero{min-height:auto;padding:130px 0 76px;}
   .hero__scroll{display:none;}
-  .cards,.honour__grid,.teach__lists,.creds{grid-template-columns:1fr;}
+  .cards,.honour__grid,.teach__lists,.creds,.pillars__grid{grid-template-columns:1fr;}
   .sys__figures{grid-template-columns:1fr;gap:22px;}
   .sys__quote{padding-left:16px;}
   .applied__list li{grid-template-columns:1fr;gap:8px;}
