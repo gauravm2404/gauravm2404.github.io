@@ -255,6 +255,10 @@
             title +
             '<p class="pub__authors">' + highlightAuthor(p.authors) + '</p>' +
             '<p class="pub__venue"><em>' + escapeHTML(p.venue) + '</em> · ' + escapeHTML(p.detail || '') + '</p>' +
+            (p.doi
+              ? '<p class="pub__ids"><a class="doi" href="https://doi.org/' + escapeHTML(p.doi) +
+                '" target="_blank" rel="noopener noreferrer">doi:' + escapeHTML(p.doi) + '</a></p>'
+              : '<p class="pub__ids pub__ids--none">No DOI registered by the journal</p>') +
           '</div>' +
           '<div class="pub__side">' + badges + '</div>' +
         '</li>';

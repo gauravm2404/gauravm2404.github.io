@@ -33,14 +33,14 @@ window.PUBLICATIONS = [
     title: "Effect of COVID-19 and sociocultural milieu on the psychopathology of mental health disorders: A hospital-based study",
     authors: "Maggu G, Jaishy R, Srivastava M, Chaudhury S, Saldanha D, Sharma S",
     venue: "Industrial Psychiatry Journal", detail: "2021;30(Suppl 1):S29–S34",
-    pmid: "34908661", badges: ["WHO COVID-19 database"],
+    pmid: "34908661", doi: "10.4103/0972-6748.328785", badges: ["WHO COVID-19 database"],
     tags: ["first"]
   },
   {
     title: "COVID-19 moral dilemmas viewed through Eastern and Western philosophy",
     authors: "Maggu G, Sharma S, Jaishy R, Jangid S",
     venue: "Industrial Psychiatry Journal", detail: "2021;30(Suppl 1):S273–S276",
-    pmid: "34908708", cites: 2, badges: ["WHO COVID-19 database"],
+    pmid: "34908708", doi: "10.4103/0972-6748.328828", cites: 2, badges: ["WHO COVID-19 database"],
     tags: ["first"]
   },
   {
@@ -54,14 +54,14 @@ window.PUBLICATIONS = [
     title: "Learning points from a study on cyberchondria",
     authors: "Maggu G, Salim SM, Beg MJ, Andrade C",
     venue: "Indian Journal of Psychiatry", detail: "2024;66(6):586–587",
-    pmid: "39100374",
+    pmid: "39100374", doi: "10.4103/indianjpsychiatry.indianjpsychiatry_465_24",
     tags: ["first"]
   },
   {
     title: "Behavioral presentations of focal onset seizures: A case series",
     authors: "Maggu G, Dhamija S, Chaudhury S, Rohatgi S, Saldanha D, Jain S",
     venue: "Industrial Psychiatry Journal", detail: "2021;30(Suppl 1):S204–S209",
-    pmid: "34908691",
+    pmid: "34908691", doi: "10.4103/0972-6748.328869",
     tags: ["first"]
   },
   {
@@ -103,7 +103,7 @@ window.PUBLICATIONS = [
     title: "Comments on “The Efficacy and Durability of Mindfulness-based Cognitive Therapy in the Treatment of Anxiety and Depressive Disorders: A Systematic Review and Meta-analysis”",
     authors: "Beg MJ, Maggu G, Sharma N, Rai Y, Andrade C",
     venue: "Indian Journal of Psychological Medicine", detail: "2026;48(1):92–93",
-    pmid: "41229586",
+    pmid: "41229586", doi: "10.1177/02537176251394169",
     tags: []
   },
   {
@@ -149,14 +149,14 @@ window.PUBLICATIONS = [
     title: "Learning points about regression analysis in a study of predictors of insight in obsessive compulsive disorder",
     authors: "Beg MJ, Maggu G, Tekkalaki B, Andrade C",
     venue: "Indian Journal of Psychiatry", detail: "2024;66(10):982–983",
-    pmid: "39668883",
+    pmid: "39668883", doi: "10.4103/indianjpsychiatry.indianjpsychiatry_682_24",
     tags: []
   },
   {
     title: "Internet addiction and its effects on psychological wellbeing: A community-based study",
     authors: "Jaishy R, Maggu G, Srivastava M, Srivastava M, Chaudhury S, Saldanha D",
     venue: "Industrial Psychiatry Journal", detail: "2023;32(1):113–119",
-    pmid: "37274579",
+    pmid: "37274579", doi: "10.4103/ipj.ipj_61_22",
     tags: []
   },
   {
@@ -169,21 +169,21 @@ window.PUBLICATIONS = [
     title: "Improvement of tinnitus with trifluoperazine in a patient with psychosis and ear disease",
     authors: "Jain S, Srivastava AS, Madhu, Maggu G, Pandey M",
     venue: "Asian Journal of Psychiatry", detail: "2017;30:177–178",
-    pmid: "29080514",
+    pmid: "29080514", doi: "10.1016/j.ajp.2017.10.027",
     tags: []
   },
   {
     title: "Whether caffeine use is a protective or a risk factor for depression and suicide?",
     authors: "Jain S, Srivastava AS, Maggu G, Verma RP",
     venue: "Asian Journal of Psychiatry", detail: "2017;28:163–164",
-    pmid: "28784377",
+    pmid: "28784377", doi: "10.1016/j.ajp.2017.05.014",
     tags: []
   },
   {
     title: "Caffeine addiction: Need for awareness and research and regulatory measures",
     authors: "Jain S, Srivastava AS, Verma RP, Maggu G",
     venue: "Asian Journal of Psychiatry", detail: "2019;41:73–75",
-    pmid: "28174076",
+    pmid: "28174076", doi: "10.1016/j.ajp.2017.01.008",
     tags: []
   }
 ];
