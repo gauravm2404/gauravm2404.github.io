@@ -66,9 +66,10 @@ window.PUBLICATIONS = [
   },
   {
     title: "A rare case report of moving ear syndrome",
-    authors: "Maggu G et al.",
-    venue: "Journal of Case Reports and Scientific Images", detail: "2023;5(2):11–13",
-    tags: ["first"]
+    authors: "Singh H, Maggu G, Jaishy R, Srivastava M",
+    venue: "Journal of Case Reports and Scientific Images", detail: "2023 Jul;5(2):11–13",
+    doi: "10.22271/27080056.2023.v5.i2a.67",
+    tags: []
   },
   {
     title: "Baclofen for reduction of craving and anxiety/depression in alcohol dependence syndrome: A preliminary investigation",
@@ -129,20 +130,23 @@ window.PUBLICATIONS = [
   },
   {
     title: "Exploring stress, burnout, and alcohol consumption among postgraduate medical residents: A cross-sectional analysis",
-    authors: "Certi A, Chaudhury S, Saldanha D, Maggu G, Thakur R",
-    venue: "Medical Journal of DY Patil Vidyapeeth", detail: "2026;19:342–348",
+    authors: "Perti A, Chaudhury S, Saldanha D, Maggu G, Thakur R",
+    venue: "Medical Journal of Dr. D.Y. Patil Vidyapeeth", detail: "2026;19(4):342–348",
+    doi: "10.4103/mjdrdypu.mjdrdypu_312_25",
     tags: []
   },
   {
     title: "Diffuse cortical atrophy in young males with alcohol dependence",
     authors: "Ghosh P, Thaker D, Chaudhury S, Davis S, Maggu G, Chaudhari B",
     venue: "Industrial Psychiatry Journal", detail: "2025 Jan 15",
+    doi: "10.4103/ipj.ipj_166_24",
     tags: []
   },
   {
     title: "Premenstrual dysphoric disorder and its relationship with stress: A study on medical and allied medical science students at a tertiary care centre",
-    authors: "Bairwa K, Maggu G et al.",
+    authors: "Bairwa K, Maggu G, Choudhary S, Mathur S, Motwani Y",
     venue: "Annals of Indian Psychiatry", detail: "2024;8(1):20–24",
+    doi: "10.4103/aip.aip_36_23",
     tags: []
   },
   {
