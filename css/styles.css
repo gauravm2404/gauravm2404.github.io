@@ -368,7 +368,7 @@ button{font:inherit;color:inherit;border:0;background:none;cursor:pointer;}
 .aiml__head{display:grid;grid-template-columns:1.25fr .75fr;gap:clamp(24px,4vw,56px);align-items:end;}
 .aiml__note{font-size:.98rem;max-width:38ch;}
 
-.creds{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:52px;}
+.creds{display:grid;grid-template-columns:1fr;gap:16px;margin-top:52px;}
 .cred{
   position:relative;background:var(--paper);border:1px solid var(--line);
   border-radius:var(--r-lg);padding:30px 30px 26px;overflow:hidden;isolation:isolate;
@@ -400,6 +400,20 @@ button{font:inherit;color:inherit;border:0;background:none;cursor:pointer;}
   width:20px;height:20px;border-radius:6px;background:var(--ocean-800);color:#fff;
   font-family:var(--font-mono);font-size:.62rem;display:grid;place-items:center;
 }
+/* each course carries its own completion date and verification link */
+.cred__courses--verified{gap:0;max-width:none;margin-bottom:4px;}
+.cred__courses--verified li{
+  display:flex;align-items:center;gap:16px;
+  padding:14px 0 14px 30px;border-bottom:1px solid var(--line);
+}
+.cred__courses--verified li:first-child{border-top:1px solid var(--line);}
+.cred__courses--verified li::before{top:15px;}
+.cred__courses--verified li > div{display:flex;flex-direction:column;gap:3px;min-width:0;}
+.cred__courses--verified b{font-weight:650;font-size:.95rem;color:var(--ink);line-height:1.35;}
+.cred__courses--verified span{
+  font-family:var(--font-mono);font-size:.68rem;letter-spacing:.04em;color:var(--muted);
+}
+.cred__courses--verified .verify{margin-left:auto;flex:none;}
 .cred__foot{
   margin-top:auto;padding-top:16px;border-top:1px dashed var(--line);
   display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;
