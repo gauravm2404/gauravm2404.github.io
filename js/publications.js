@@ -1,4 +1,4 @@
-/* Peer-reviewed publications — 26 entries.
+/* Peer-reviewed publications — 23 entries.
    Cross-checked against PubMed (esearch "Maggu G[Author]", Aug 2026); where PubMed
    and the CV disagreed on year, pagination or author order, PubMed wins.
    `pmid` renders a verifiable link; `doi` is the fallback for entries not yet indexed.
@@ -71,20 +71,6 @@ window.PUBLICATIONS = [
     doi: "10.22271/27080056.2023.v5.i2a.67",
     tags: []
   },
-  {
-    title: "Baclofen for reduction of craving and anxiety/depression in alcohol dependence syndrome: A preliminary investigation",
-    authors: "Maggu G, Kumar P, Verma V, Srivastava M",
-    venue: "International Education and Research Journal", detail: "2020;6(3)",
-    tags: ["first"]
-  },
-  {
-    title: "Alternative therapies of neuropsychiatric disorders",
-    authors: "Maggu G, Yadav JS, Bhardwaj G, Kumar A, Katiyar R",
-    venue: "IP International Journal of Comprehensive and Advanced Pharmacology", detail: "2017;2(4):107–114",
-    tags: ["first"]
-  },
-
-  /* ── co-authored ──────────────────────────────────────────────────── */
   {
     title: "Artificial intelligence in suicide prevention: Utilizing deep learning approach for early detection",
     authors: "Gaur V, Maggu G, Bairwa K, Chaudhury S, Dhamija S, Ali T",
@@ -161,12 +147,6 @@ window.PUBLICATIONS = [
     authors: "Jaishy R, Maggu G, Srivastava M, Srivastava M, Chaudhury S, Saldanha D",
     venue: "Industrial Psychiatry Journal", detail: "2023;32(1):113–119",
     pmid: "37274579", doi: "10.4103/ipj.ipj_61_22",
-    tags: []
-  },
-  {
-    title: "Co-morbid psychiatric disorders in patients with irritable bowel syndrome attending Gastroenterology and Psychiatry OPD in a tertiary centre",
-    authors: "Chaudhary A, Prakash S, Yadav JS, Dixit VK, Maggu G",
-    venue: "International Research Journal of Pharmacy and Medical Sciences", detail: "2020;3(3):1–5",
     tags: []
   },
   {
