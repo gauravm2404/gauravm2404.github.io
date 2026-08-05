@@ -1,4 +1,4 @@
-/* Peer-reviewed publications — 23 entries.
+/* Peer-reviewed publications — 22 entries.
    Cross-checked against PubMed (esearch "Maggu G[Author]", Aug 2026); where PubMed
    and the CV disagreed on year, pagination or author order, PubMed wins.
    `pmid` renders a verifiable link; `doi` is the fallback for entries not yet indexed.
@@ -21,13 +21,6 @@ window.PUBLICATIONS = [
     pmid: "38161465", doi: "10.4103/ipj.ipj_43_23",
     cites: 18,
     tags: ["first", "meta"]
-  },
-  {
-    title: "Navigating change: The journey of the child guidance clinic before and after the COVID-19 pandemic",
-    authors: "Maggu G, Verma V, Chaudhury S, Indla V",
-    venue: "Industrial Psychiatry Journal", detail: "2025;34(2):340–344",
-    doi: "10.4103/ipj.ipj_28_25",
-    tags: ["first", "child"]
   },
   {
     title: "Effect of COVID-19 and sociocultural milieu on the psychopathology of mental health disorders: A hospital-based study",
