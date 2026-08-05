@@ -1,4 +1,4 @@
-/* Peer-reviewed publications — 22 entries.
+/* Peer-reviewed publications — 23 entries.
    Cross-checked against PubMed (esearch "Maggu G[Author]", Aug 2026); where PubMed
    and the CV disagreed on year, pagination or author order, PubMed wins.
    `pmid` renders a verifiable link; `doi` is the fallback for entries not yet indexed.
@@ -55,6 +55,13 @@ window.PUBLICATIONS = [
     authors: "Maggu G, Dhamija S, Chaudhury S, Rohatgi S, Saldanha D, Jain S",
     venue: "Industrial Psychiatry Journal", detail: "2021;30(Suppl 1):S204–S209",
     pmid: "34908691", doi: "10.4103/0972-6748.328869",
+    tags: ["first"]
+  },
+  {
+    title: "Baclofen for reduction of craving and anxiety/depression in alcohol dependence syndrome: A preliminary investigation",
+    authors: "Maggu G, Kumar P, Verma V, Srivastava M",
+    venue: "International Education and Research Journal", detail: "2020;6(3)",
+    url: "https://ierj.in/journal/index.php/ierj/article/view/1987",
     tags: ["first"]
   },
   {

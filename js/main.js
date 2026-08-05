@@ -238,9 +238,11 @@
       if (p.cites) badges = '<span class="badge badge--cite">' + p.cites + ' citations</span>' + badges;
       if (p.award) badges = '<span class="badge badge--award">' + escapeHTML(p.award) + '</span>' + badges;
 
-      /* prefer the PubMed record; fall back to the DOI for entries not yet indexed */
+      /* prefer PubMed, then the DOI, then a direct publisher URL for journals
+         that mint neither */
       var href = p.pmid ? 'https://pubmed.ncbi.nlm.nih.gov/' + p.pmid + '/'
                : p.doi  ? 'https://doi.org/' + p.doi
+               : p.url  ? p.url
                : null;
       var title = href
         ? '<a class="pub__title pub__title--link" href="' + escapeHTML(href) + '" target="_blank" rel="noopener noreferrer">' +
@@ -258,6 +260,9 @@
             (p.doi
               ? '<p class="pub__ids"><a class="doi" href="https://doi.org/' + escapeHTML(p.doi) +
                 '" target="_blank" rel="noopener noreferrer">doi:' + escapeHTML(p.doi) + '</a></p>'
+              : p.url
+              ? '<p class="pub__ids"><a class="doi" href="' + escapeHTML(p.url) +
+                '" target="_blank" rel="noopener noreferrer">publisher record ↗</a></p>'
               : '<p class="pub__ids pub__ids--none">No DOI registered by the journal</p>') +
           '</div>' +
           '<div class="pub__side">' + badges + '</div>' +
