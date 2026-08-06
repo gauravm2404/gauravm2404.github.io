@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://gauravm2404.github.io/sitemap.xml
+Sitemap: https://drgauravmaggu.com/sitemap.xml
