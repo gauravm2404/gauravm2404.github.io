@@ -227,6 +227,11 @@
 
   function render() {
     if (!list) return;
+    /* The list is pre-rendered into index.html by tools/prerender-publications.js
+       so that crawlers which do not execute JavaScript can read it. If those
+       items are already present, leave them alone and let the filter/search
+       code below bind to them. */
+    if (list.children.length) return;
     list.innerHTML = data.map(function (p, i) {
       var badges = (p.badges || []).map(function (b) {
         return '<span class="badge">' + escapeHTML(b) + '</span>';
