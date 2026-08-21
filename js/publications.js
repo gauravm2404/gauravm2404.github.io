@@ -1,4 +1,4 @@
-/* Peer-reviewed publications — 23 entries.
+/* Peer-reviewed publications — 24 entries.
    Cross-checked against PubMed (esearch "Maggu G[Author]", Aug 2026); where PubMed
    and the CV disagreed on year, pagination or author order, PubMed wins.
    `pmid` renders a verifiable link; `doi` is the fallback for entries not yet indexed.
@@ -56,6 +56,13 @@ window.PUBLICATIONS = [
     venue: "Industrial Psychiatry Journal", detail: "2021;30(Suppl 1):S204–S209",
     pmid: "34908691", doi: "10.4103/0972-6748.328869",
     tags: ["first"]
+  },
+  {
+    title: "Navigating change: the journey of the child guidance clinic before and after the COVID-19 pandemic",
+    authors: "Maggu G, Verma V, Chaudhury S, Indla V",
+    venue: "Industrial Psychiatry Journal", detail: "2025;34(2):340–344",
+    doi: "10.4103/ipj.ipj_28_25",
+    tags: ["first", "child"]
   },
   {
     title: "Baclofen for reduction of craving and anxiety/depression in alcohol dependence syndrome: A preliminary investigation",
