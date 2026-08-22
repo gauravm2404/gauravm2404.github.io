@@ -1,4 +1,4 @@
-/* Peer-reviewed publications — 24 entries.
+/* Peer-reviewed publications — 25 entries.
    Cross-checked against PubMed (esearch "Maggu G[Author]", Aug 2026); where PubMed
    and the CV disagreed on year, pagination or author order, PubMed wins.
    `pmid` renders a verifiable link; `doi` is the fallback for entries not yet indexed.
@@ -58,11 +58,16 @@ window.PUBLICATIONS = [
     tags: ["first"]
   },
   {
-    title: "Navigating change: the journey of the child guidance clinic before and after the COVID-19 pandemic",
-    authors: "Maggu G, Verma V, Chaudhury S, Indla V",
-    venue: "Industrial Psychiatry Journal", detail: "2025;34(2):340–344",
-    doi: "10.4103/ipj.ipj_28_25",
-    tags: ["first", "child"]
+    title: "Co-morbid psychiatric disorders in patients with irritable bowel syndrome attending Gastroenterology and Psychiatry OPD in a tertiary centre",
+    authors: "Chaudhary A, Prakash S, Yadav JS, Dixit VK, Maggu G",
+    venue: "International Research Journal of Pharmacy and Medical Sciences", detail: "2020;3(3):1–5",
+    tags: []
+  },
+  {
+    title: "Alternative therapies of neuropsychiatric disorders",
+    authors: "Maggu G, Yadav JS, Bhardwaj G, Kumar A, Katiyar R",
+    venue: "IP International Journal of Comprehensive and Advanced Pharmacology", detail: "2017;2(4):107–114",
+    tags: ["first"]
   },
   {
     title: "Baclofen for reduction of craving and anxiety/depression in alcohol dependence syndrome: A preliminary investigation",
